@@ -1,6 +1,6 @@
 {
   "id": "vtt-ninja",
-  "title": "Foundry Ninja",
+  "title": "VTT Ninja",
   "description": "Relays FoundryVTT video chat to OBS Ninja for unique streaming sources.",
   "version": "1.0.0",
   "authors": [{ "Syphre": "Syphre", "url": "https://github.com/GarebearNF" }],
