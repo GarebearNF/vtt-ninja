@@ -1,0 +1,53 @@
+<form class="debug-panel">
+    <h2>OBS Ninja Debug Panel</h2>
+    <div>
+        <label>Current Latency:</label>
+        <span id="latency-value">Calculating...</span>
+    </div>
+    <div>
+        <label>Connection Status:</label>
+        <span id="connection-status">Checking...</span>
+    </div>
+    <button type="button" id="refresh-debug">Refresh</button>
+</form>
+
+<script>
+    document.getElementById("refresh-debug").addEventListener("click", async () => {
+        const latencyElement = document.getElementById("latency-value");
+        const statusElement = document.getElementById("connection-status");
+
+        latencyElement.textContent = "Updating...";
+        statusElement.textContent = "Updating...";
+
+        try {
+            // Simulated latency check (replace with actual implementation)
+            const latency = Math.random() * 100 + " ms";
+            latencyElement.textContent = latency;
+            statusElement.textContent = "Connected";
+        } catch (error) {
+            latencyElement.textContent = "Error fetching latency";
+            statusElement.textContent = "Disconnected";
+        }
+    });
+</script>
+
+<style>
+    .debug-panel {
+        padding: 10px;
+        font-family: Arial, sans-serif;
+    }
+
+    .debug-panel h2 {
+        margin-bottom: 10px;
+    }
+
+    .debug-panel div {
+        margin-bottom: 8px;
+    }
+
+    .debug-panel button {
+        margin-top: 10px;
+        padding: 5px;
+        cursor: pointer;
+    }
+</style>
